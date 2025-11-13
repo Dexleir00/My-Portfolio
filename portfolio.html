@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Personal Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0C0C0D;
+      --surface:#111113;
+      --glass:rgba(255,255,255,0.04);
+      --text:#686868;
+      --muted:#9A9A9C;
+      --accent:#D1D1D1;
+    }
+    *{box-sizing:border-box;margin:0;padding:0;font-family:'Poppins',sans-serif}
+    body{background:url('black.jpg') center/cover no-repeat fixed;color:var(--text)}
+
+    /* ==== Layout ==== */
+    .container{width:100%;max-width:1200px;margin:0 auto;padding:60px 20px}
+
+    /* ==== Sidebar ==== */
+    .sidebar{
+      position:fixed;top:0;left:0;height:100vh;width:250px;
+      background:var(--surface);border-right:1px solid rgba(255,255,255,0.06);
+      padding:40px 20px;display:flex;flex-direction:column;align-items:center;gap:20px;
+    }
+    .profile-pic{
+      width:140px;height:140px;border-radius:50%;overflow:hidden;
+      background:#222;display:flex;align-items:center;justify-content:center;color:var(--muted);
+      border:4px solid rgba(255,255,255,0.05);
+    }
+    .name{font-size:20px;font-weight:700;margin-top:10px}
+    .job{color:var(--muted);font-size:14px;margin-bottom:20px;text-align:center}
+
+    nav ul{list-style:none;width:100%;padding-top:20px}
+    nav li{padding:12px 0;font-size:15px;font-weight:500;border-bottom:1px solid rgba(255,255,255,0.04)}
+    nav a{color:var(--muted);text-decoration:none;transition:0.2s}
+    nav a:hover{color:var(--text)}
+
+    /* ==== Main content ==== */
+    .main{margin-left:260px;padding:40px 20px}
+
+    section{padding:60px 0;border-bottom:1px solid rgba(255,255,255,0.05)}
+    h2{font-size:32px;font-weight:700;margin-bottom:20px}
+    p{color:var(--muted);max-width:700px}
+
+    /* ==== Hero ==== */
+    .hero-text h1{font-size:46px;font-weight:700}
+    .hero-text p{margin-top:10px;font-size:18px;color:var(--muted)}
+
+    /* ==== Projects ==== */
+    .projects{display:grid;grid-template-columns:repeat(auto-fit, minmax(320px,1fr));gap:30px;margin-top:30px}
+    .project{
+      background:var(--surface);border-radius:14px;padding:20px;
+      border:1px solid rgba(255,255,255,0.05);
+      transition:0.2s;cursor:pointer;
+    }
+    .project:hover{transform:translateY(-4px);border-color:var(--accent)}
+    .project-img{width:100%;height:180px;border-radius:10px;background:#222;color:var(--muted);
+      display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+    .project p{margin-top:6px}
+
+    /* ==== Contact ==== */
+    form{max-width:600px;display:flex;flex-direction:column;gap:12px;margin-top:20px}
+    input,textarea{background:transparent;border:1px solid rgba(0, 0, 0, 0.1);
+      padding:12px;border-radius:10px;color:var(--text)}
+    button{padding:12px;border:none;border-radius:10px;background:var(--surface);
+      color:var(--text);cursor:pointer;font-weight:600}
+    button:hover{background:#1A1A1D}
+
+    footer{text-align:center;color:var(--muted);padding:40px 0;font-size:14px}
+
+    @media(max-width:900px){
+      .sidebar{position:relative;width:100%;height:auto;flex-direction:row;justify-content:center;gap:20px;padding:20px 10px}
+      nav ul{display:none}
+      .main{margin-left:0}
+    }
+  .socials a:hover{color:var(--text)}
+
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+   <div class="profile-pic">
+  <img src="white.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:50%;">
+</div>
+
+    <div class="name" id="yourName">Dexleir Vhon Meric</div>
+    
+
+    <!-- Social Media (with icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <div class="socials" style="display:flex;gap:16px;margin-top:10px;font-size:20px;">
+      <a href="https://www.facebook.com/vhon.meric" id="fbLink" target="_blank" style="color:var(--muted);text-decoration:none"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.instagram.com/unidentifiedhotdog/" id="igLink" target="_blank" style="color:var(--muted);text-decoration:none"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/Dexleir00" id="gitLink" target="_blank" style="color:var(--muted);text-decoration:none"><i class="fab fa-github"></i></a>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="main">
+
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>Hello, I'm <span id="heroName">Dexleir Vhon Meric</span></h1>
+        <p id="heroDesc">A developer who builds elegant and modern web experiences.</p>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p id="aboutText">I bring ideas to life through thoughtful design and clean front-end development. I love creating interfaces that feel modern, minimal, and meaningful. Every project I work on balances aesthetics, usability, and performance — with the goal of delivering experiences that people enjoy using.</p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project">
+          <div class="project-img">
+  <img src="good.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+</div>
+          <h3 id="project1title">PORTFOLIO & BLOG WEBSITE LAYOUT</h3>
+          <p id="project1desc">A clean and dynamic UI layout for a fantasy sports website showcasing multiple screens.</p>
+        </div>
+
+        <div class="project">
+          <div class="project-img">
+  <img src="laptop.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+</div>
+          <h3 id="project2title">PORTFOLIO & BLOG WEBSITE LAYOUT</h3>
+          <p id="project2desc">A modern website design displaying different page layouts for portfolios or blogs.</p>
+        </div>
+
+        <div class="project">
+          <div class="project-img">
+  <img src="market.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+</div>
+          <h3 id="project3title">DIGITAL MARKETING PLATFORM</h3>
+          <p id="project3desc">A tool that tracks SEO, email, ads, and social media performance in one interface.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Message" rows="5" required></textarea>
+        <button>Send Message</button>
+      </form>
+    </section>
+
+    <footer><span id="year"></span> Your Name — All rights reserved.</footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
